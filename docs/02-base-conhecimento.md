@@ -44,11 +44,18 @@ conceitos = json.load(open('./data/conceitos_financeiros.json'))
 ```
 
 ### Exemplo de Contexto Enviado ao LLM
+```text
 Usuário:
 Mariana Oliveira
-Cargo: Analista Financeira Júnior
-Área: FP&A
-Nível de conhecimento: Iniciante
+
+Cargo:
+Analista Financeira Júnior
+
+Área:
+FP&A
+
+Nível de conhecimento:
+Iniciante
 
 Objetivo:
 Desenvolver habilidades em planejamento financeiro e análise de indicadores.
@@ -74,6 +81,7 @@ Base de conhecimento disponível:
 
 Pergunta do usuário:
 "Qual a diferença entre Budget e Forecast?"
+```
 
 Esse contexto fornece ao modelo informações suficientes para gerar respostas mais personalizadas, mantendo o foco em educação financeira corporativa e conceitos de FP&A.
 
