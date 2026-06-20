@@ -14,7 +14,7 @@
   {
     "nome": "EBITDA",
     "categoria": "Indicador Financeiro",
-    "descricao": "O EBITDA é um indicador financeiro que mostra a geração de caixa operacional de uma empresa. Em português, significa "Lucros Antes de Juros, Impostos, Depreciação e Amortização" (ou LAJIDA). Ele revela o dinheiro que o negócio consegue fazer apenas com suas atividades principais, ignorando impactos fiscais e contábeis.",
+    "descricao": "O EBITDA é um indicador financeiro que mostra a geração de caixa operacional de uma empresa. Em português, significa Lucros Antes de Juros, Impostos, Depreciação e Amortização (ou LAJIDA). Ele revela o dinheiro que o negócio consegue fazer apenas com suas atividades principais, ignorando impactos fiscais e contábeis.",
     "aplicacao": "Avaliação da performance operacional."
   },
   {
