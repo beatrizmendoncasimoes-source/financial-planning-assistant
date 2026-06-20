@@ -5,10 +5,10 @@
 ```bash
 # 1. Instalar Ollama (ollama.com)
 # 2. Baixar um modelo leve
-ollama pull gpt-oss
+ollama pull qwen2.5:3b
 
 # 3. Testar se funciona
-ollama run gpt-oss "Olá!"
+ollama run qwen2.5:3b "Olá!"
 ```
 
 ## Código Completo
@@ -30,4 +30,5 @@ streamlit run .\src\app.py
 
 ## Evidência de Execução
 
-<img width="1920" height="1107" alt="image" src="https://github.com/user-attachments/assets/60feed79-38a6-43dc-b23a-9dd007e34c1d" />
+<img width="598" height="579" alt="evidencia_execucao" src="https://github.com/user-attachments/assets/b83c6e20-c666-4f74-9d97-c83ccfadb072" />
+
