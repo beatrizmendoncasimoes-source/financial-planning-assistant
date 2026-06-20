@@ -2,31 +2,31 @@
   {
     "nome": "Budget",
     "categoria": "Planejamento Financeiro",
-    "descricao": "Planejamento financeiro elaborado para um período futuro com metas de receita, custos e despesas.",
+    "descricao": "Budget é o termo em inglês para orçamento. Trata-se do planejamento financeiro que estipula o quanto de dinheiro será destinado a despesas e investimentos em um período específico. Ele serve como um mapa para equilibrar entradas (receitas) e saídas (gastos), garantindo que os objetivos sejam alcançados sem comprometer as finanças.",
     "aplicacao": "Controle e acompanhamento do desempenho financeiro."
   },
   {
     "nome": "Forecast",
     "categoria": "Planejamento Financeiro",
-    "descricao": "Atualização periódica das projeções financeiras com base nos resultados mais recentes.",
+    "descricao": "Forecast (que significa previsão) é uma projeção de resultados futuros, como faturamento ou vendas, baseada em dados históricos e tendências de mercado. É a atualização do budget.",
     "aplicacao": "Revisão das expectativas de desempenho."
   },
   {
     "nome": "EBITDA",
     "categoria": "Indicador Financeiro",
-    "descricao": "Indicador que mede o resultado operacional antes de juros, impostos, depreciação e amortização.",
+    "descricao": "O EBITDA é um indicador financeiro que mostra a geração de caixa operacional de uma empresa. Em português, significa "Lucros Antes de Juros, Impostos, Depreciação e Amortização" (ou LAJIDA). Ele revela o dinheiro que o negócio consegue fazer apenas com suas atividades principais, ignorando impactos fiscais e contábeis.",
     "aplicacao": "Avaliação da performance operacional."
   },
   {
     "nome": "Fluxo de Caixa",
     "categoria": "Gestão Financeira",
-    "descricao": "Controle das entradas e saídas de recursos financeiros.",
+    "descricao": "O fluxo de caixa é o registro de todo o dinheiro que entra e sai de um negócio em um determinado período. Ele funciona como um raio-x financeiro, permitindo acompanhar o saldo disponível, garantir o pagamento de contas e planejar investimentos com segurança.",
     "aplicacao": "Avaliação da liquidez da empresa."
   },
   {
     "nome": "Real vs Budget",
     "categoria": "Controle Gerencial",
-    "descricao": "Comparação entre os resultados realizados e os valores planejados.",
+    "descricao": "O Budget é o plano financeiro que estabelece suas metas e limites para o ano. O Forecast, por outro lado, é a previsão atualizada da realidade, ajustando a rota conforme o cenário muda.",
     "aplicacao": "Identificação de desvios e oportunidades de melhoria."
   }
 ]
