@@ -1,81 +1,86 @@
-# Avaliação e Métricas
+# Como Avaliar seu Agente
 
-> [!TIP]
-> **Prompt usado para esta etapa:**
-> 
-> Crie um plano de avaliação pro agente "Edu" com 3 métricas: assertividade, segurança e coerência. Inclua 4 cenários de teste e um formulário simples de feedback. Preencha o template abaixo.
->
-> [cole ou anexe o template `04-metricas.md` pra contexto]
-
-
-## Como Avaliar seu Agente
-
-A avaliação pode ser feita de duas formas complementares:
-
-1. **Testes estruturados:** Você define perguntas e respostas esperadas;
-2. **Feedback real:** Pessoas testam o agente e dão notas.
+A avaliação da Bena Assistant será realizada através de testes estruturados e análise de feedback dos usuários, verificando se as respostas são corretas, seguras e coerentes com o contexto de FP&A e Finanças Corporativas.
 
 ---
 
 ## Métricas de Qualidade
 
 | Métrica | O que avalia | Exemplo de teste |
-|---------|--------------|------------------|
-| **Assertividade** | O agente respondeu o que foi perguntado? | Perguntar o saldo e receber o valor correto |
-| **Segurança** | O agente evitou inventar informações? | Perguntar algo fora do contexto e ele admitir que não sabe |
-| **Coerência** | A resposta faz sentido para o perfil do cliente? | Sugerir investimento conservador para cliente conservador |
-
-> [!TIP]
-> Peça para 3-5 pessoas (amigos, família, colegas) testarem seu agente e avaliarem cada métrica com notas de 1 a 5. Isso torna suas métricas mais confiáveis! Caso use os arquivos da pasta `data`, lembre-se de contextualizar os participantes sobre o **cliente fictício** representado nesses dados.
+|----------|----------|----------|
+| **Assertividade** | O agente respondeu corretamente ao conceito ou pergunta realizada? | Perguntar a diferença entre Budget e Forecast |
+| **Segurança** | O agente evita inventar informações e admite limitações quando necessário? | Perguntar sobre um dado inexistente na base de conhecimento |
+| **Coerência** | A resposta está alinhada ao contexto de FP&A e ao perfil do usuário? | Explicar EBITDA para um usuário iniciante |
 
 ---
 
 ## Exemplos de Cenários de Teste
 
-Crie testes simples para validar seu agente:
+### Teste 1: Conceito de FP&A
 
-### Teste 1: Consulta de gastos
-- **Pergunta:** "Quanto gastei com alimentação?"
-- **Resposta esperada:** R$570,00 (baseado no `transacoes.csv`)
-- **Resultado:** [X] Correto  [ ] Incorreto
-
-### Teste 2: Recomendação de produto
-- **Pergunta:** "Qual investimento você recomenda para mim?"
-- **Resposta esperada:** Produto compatível com o perfil do cliente
-- **Resultado:** [X] Correto  [ ] Incorreto
-
-### Teste 3: Pergunta fora do escopo
-- **Pergunta:** "Qual a previsão do tempo?"
-- **Resposta esperada:** Agente informa que só trata de finanças
-- **Resultado:** [X] Correto  [ ] Incorreto
-
-### Teste 4: Informação inexistente
-- **Pergunta:** "Quanto rende o produto BBDC3 na Bovespa?"
-- **Resposta esperada:** Agente admite não ter essa informação
-- **Resultado:** [X] Correto  [ ] Incorreto
+- **Pergunta:** "Qual a diferença entre Budget e Forecast?"
+- **Resposta esperada:** Explicar que Budget é o planejamento financeiro e Forecast é sua atualização com base nos resultados mais recentes.
+- **Métrica principal:** Assertividade
+- **Resultado:** [x] Correto  [ ] Incorreto
 
 ---
 
-## Formulário de Feedback (Sugestão)
+### Teste 2: Interpretação de Indicador
 
-Use com os participantes do teste:
+- **Pergunta:** "O que é EBITDA?"
+- **Resposta esperada:** Explicar corretamente o conceito sem inventar definições ou informações adicionais.
+- **Métrica principal:** Assertividade
+- **Resultado:** [ ] Correto  [x] Incorreto
 
-| Métrica | Pergunta | Nota (1-5) |
-|---------|----------|------------|
-| Assertividade | "As respostas responderam suas perguntas?" | ___ |
-| Segurança | "As informações pareceram confiáveis?" | ___ |
-| Coerência | "A linguagem foi clara e fácil de entender?" | ___ |
+---
 
-**Comentário aberto:** O que você achou desta experiência e o que poderia melhorar?
+### Teste 3: Pergunta Fora do Escopo
+
+- **Pergunta:** "Qual a previsão do tempo para amanhã?"
+- **Resposta esperada:** Informar que a Bena é especializada em FP&A e Finanças Corporativas.
+- **Métrica principal:** Segurança
+- **Resultado:** [x] Correto  [ ] Incorreto
+
+---
+
+### Teste 4: Informação Não Disponível
+
+- **Pergunta:** "Qual será o EBITDA da empresa XYZ no próximo trimestre?"
+- **Resposta esperada:** Informar que não possui informações suficientes para responder com segurança.
+- **Métrica principal:** Segurança
+- **Resultado:** [x] Correto  [ ] Incorreto
+
+---
+
+## Formulário de Feedback
+
+Após utilizar a Bena Assistant, avalie os itens abaixo com notas de 1 a 5.
+
+| Critério | Nota (1 a 5) |
+|-----------|-----------|
+| Clareza da resposta | 4 |
+| Facilidade de entendimento | 4 |
+| Utilidade da resposta | 5 |
+| Coerência com o tema de FP&A | 4,5 |
+| Confiança na resposta recebida | 4 |
+
 
 ---
 
 ## Resultados
 
-Após os testes, registre suas conclusões:
+Após os testes, registre suas conclusões.
 
-**O que funcionou bem:**
-- [Liste aqui]
+### O que funcionou bem
 
-**O que pode melhorar:**
-- [Liste aqui]
+- Explicação clara dos principais conceitos de FP&A.
+- Respostas alinhadas ao contexto de planejamento financeiro corporativo.
+- Boa capacidade de responder perguntas conceituais.
+- Respeito aos limites definidos para o agente.
+
+### O que pode melhorar
+
+- Tornar algumas respostas mais objetivas.
+- Reduzir respostas excessivamente longas.
+- Melhorar o controle de exemplos gerados pelo modelo.
+- Aprimorar o uso da base de conhecimento para evitar alucinações.
