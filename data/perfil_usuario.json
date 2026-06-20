@@ -1,0 +1,26 @@
+{
+  "nome": "Mariana Oliveira",
+  "cargo": "Analista Financeira Júnior",
+  "area": "FP&A",
+  "empresa": "Empresa Fictícia S.A.",
+  "objetivo_principal": "Desenvolver habilidades em planejamento financeiro e análise de indicadores",
+  "nivel_conhecimento": "iniciante",
+  "anos_experiencia": 1,
+  "temas_interesse": [
+    "Budget",
+    "Forecast",
+    "DRE",
+    "EBITDA",
+    "Fluxo de Caixa"
+  ],
+  "metas": [
+    {
+      "meta": "Aprender a construir Forecasts",
+      "prazo": "2026-03"
+    },
+    {
+      "meta": "Dominar análise de variações Real vs Budget",
+      "prazo": "2026-06"
+    }
+  ]
+}
