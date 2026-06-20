@@ -14,8 +14,6 @@
 
 ## Adaptações nos Dados
 
-> Você modificou ou expandiu os dados mockados? Descreva aqui.
-
 Os dados originais do projeto eram focados em finanças pessoais e investimentos. Para alinhar o projeto à proposta da Bena Assistant, os arquivos foram adaptados para um contexto de FP&A e finanças corporativas.
 
 As principais alterações incluíram:
@@ -29,7 +27,6 @@ As principais alterações incluíram:
 ## Estratégia de Integração
 
 ### Como os dados são carregados?
-> Descreva como seu agente acessa a base de conhecimento.
 
 A aplicação carrega os arquivos JSON e CSV para compor o contexto utilizado pelo modelo de linguagem. Dessa forma, a Bena Assistant consegue gerar respostas mais alinhadas ao perfil do usuário e aos conceitos disponíveis em sua base de conhecimento.
 
@@ -155,8 +152,6 @@ BASE DE CONHECIMENTO (data/conceitos_financeiros.json)
 ---
 
 ## Exemplo de Contexto Montado
-
-> Mostre um exemplo de como os dados são formatados para o agente.
 
 O exemplo de contexto abaixo sintetiza as informações mais relevantes da base de conhecimento da Bena Assistant. O objetivo é fornecer contexto suficiente para respostas personalizadas sem consumir uma quantidade excessiva de tokens. Em aplicações reais, o nível de detalhamento deve ser ajustado conforme a complexidade da solicitação do usuário.
 
