@@ -9,11 +9,11 @@
 
 ## Dados Utilizados
 
-| Arquivo | Formato | Para que serve no Edu? |
+| Arquivo | Formato | Para que serve na Bena? |
 |---------|---------|---------------------|
-| `historico_atendimento.csv` | CSV | Contextualizar interações anteriores, ou seja, dar continuidade ao atendimento de forma mais eficiente. |
-| `perfil_investidor.json` | JSON | Personalizar as explicações sobre as dúvidas e necessidades de aprendizado do cliente. |
-| `produtos_financeiros.json` | JSON | Conhecer os produtos disponíveis para que eles possam ser ensinados ao cliente. |
+| `historico_consultas.csv` | CSV | Registrar temas já discutidos com o usuário e fornecer contexto para atendimentos futuros. |
+| `perfil_usuario.json` | JSON | Identificar o perfil profissional, nível de conhecimento e objetivos do usuário para personalizar as explicações. |
+| `conceitos_financeiros.json` | JSON | Servir como base de conhecimento sobre FP&A, indicadores financeiros e conceitos de planejamento financeiro. |
 | `transacoes.csv` | CSV | Analisar padrão de gastos do cliente e usar essas informações de forma didática. |
 
 ---
