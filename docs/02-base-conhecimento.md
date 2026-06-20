@@ -1,11 +1,5 @@
 # Base de Conhecimento
 
-> [!TIP]
-> **Prompt usado para esta etapa:**
-> 
-> Organize a base de conhecimento do agente "Edu" usando os 4 arquivos da pasta `data/` (em anexo). Explique pra que serve cada arquivo e monte um exemplo de contexto formatado que será enviado pro LLM. Preencha o template abaixo.
->
-> [cole ou anexe o template `02-base-conhecimento.md` pra contexto]
 
 ## Dados Utilizados
 
@@ -14,7 +8,7 @@
 | `historico_consultas.csv` | CSV | Registrar temas já discutidos com o usuário e fornecer contexto para atendimentos futuros. |
 | `perfil_usuario.json` | JSON | Identificar o perfil profissional, nível de conhecimento e objetivos do usuário para personalizar as explicações. |
 | `conceitos_financeiros.json` | JSON | Servir como base de conhecimento sobre FP&A, indicadores financeiros e conceitos de planejamento financeiro. |
-| `transacoes.csv` | CSV | Analisar padrão de gastos do cliente e usar essas informações de forma didática. |
+| `indicadores_financeiros.csv` | CSV | Disponibilizar dados financeiros simulados para exemplos, análises e interpretação de indicadores. |
 
 ---
 
@@ -22,7 +16,13 @@
 
 > Você modificou ou expandiu os dados mockados? Descreva aqui.
 
-O produto Fundo Imobiliário (FII) substituiu o Fundo Multimercado, pois pessoalmente me sinto mais confiante em usar apenas produtos financeiros que eu conheço. Assim, poderei validar as respostas do Edu de forma mais assertiva.
+Os dados originais do projeto eram focados em finanças pessoais e investimentos. Para alinhar o projeto à proposta da Bena Assistant, os arquivos foram adaptados para um contexto de FP&A e finanças corporativas.
+
+As principais alterações incluíram:
+- Substituição do perfil de investidor por um perfil profissional de FP&A.
+- Troca dos produtos financeiros por conceitos e indicadores financeiros corporativos.
+- Substituição das transações pessoais por indicadores financeiros simulados.
+- Adaptação do histórico de atendimento para consultas relacionadas a planejamento financeiro, orçamento e análise de desempenho.
 
 ---
 
@@ -31,17 +31,53 @@ O produto Fundo Imobiliário (FII) substituiu o Fundo Multimercado, pois pessoal
 ### Como os dados são carregados?
 > Descreva como seu agente acessa a base de conhecimento.
 
-Existem duas possibilidades, injetar os dados diretamente no prompt (Ctrl + C, Ctrl + V) ou carregar os arquivos via código, como no exemplo abaixo:
+A aplicação carrega os arquivos JSON e CSV para compor o contexto utilizado pelo modelo de linguagem. Dessa forma, a Bena Assistant consegue gerar respostas mais alinhadas ao perfil do usuário e aos conceitos disponíveis em sua base de conhecimento.
 
 ```python
 import pandas as pd
 import json
 
-perfil = json.load(open('./data/perfil_investidor.json'))
-transacoes = pd.read_csv('./data/transacoes.csv')
-historico = pd.read_csv('./data/historico_atendimento.csv')
-produtos = json.load(open('./data/produtos_financeiros.json'))
+perfil = json.load(open('./data/perfil_usuario.json'))
+indicadores = pd.read_csv('./data/indicadores_financeiros.csv')
+historico = pd.read_csv('./data/historico_consultas.csv')
+conceitos = json.load(open('./data/conceitos_financeiros.json'))
 ```
+
+### Exemplo de Contexto Enviado ao LLM
+Usuário:
+Mariana Oliveira
+Cargo: Analista Financeira Júnior
+Área: FP&A
+Nível de conhecimento: Iniciante
+
+Objetivo:
+Desenvolver habilidades em planejamento financeiro e análise de indicadores.
+
+Temas de interesse:
+- Budget
+- Forecast
+- DRE
+- EBITDA
+- Fluxo de Caixa
+
+Histórico recente:
+- Explicação sobre EBITDA
+- Processo de Forecast mensal
+- Construção de Budget anual
+
+Base de conhecimento disponível:
+- Conceitos de Budget
+- Conceitos de Forecast
+- EBITDA
+- Fluxo de Caixa
+- Real vs Budget
+
+Pergunta do usuário:
+"Qual a diferença entre Budget e Forecast?"
+
+Esse contexto fornece ao modelo informações suficientes para gerar respostas mais personalizadas, mantendo o foco em educação financeira corporativa e conceitos de FP&A.
+
+---
 
 ### Como os dados são usados no prompt?
 > Os dados vão no system prompt? São consultados dinamicamente?
