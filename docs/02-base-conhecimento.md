@@ -94,12 +94,13 @@ Em uma solução mais robusta, os arquivos seriam consultados dinamicamente por 
 PERFIL DO USUÁRIO (data/perfil_usuario.json)
 
 {
-  "nome": "Mariana Oliveira",
-  "cargo": "Analista Financeira Júnior",
+  "nome": "Usuário",
+  "cargo": "Analista Financeiro",
   "area": "FP&A",
-  "objetivo_principal": "Desenvolver habilidades em planejamento financeiro e análise de indicadores",
-  "nivel_conhecimento": "iniciante",
-  "anos_experiencia": 1,
+  "empresa": "Empresa Exemplo",
+  "objetivo_principal": "Desenvolver conhecimentos em planejamento financeiro e análise de indicadores",
+  "nivel_conhecimento": "intermediário",
+  "anos_experiencia": 2,
   "temas_interesse": [
     "Budget",
     "Forecast",
